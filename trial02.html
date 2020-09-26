@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="trial02.css" />
+  </head>
+  <body>
+    <button type="button" id="bgColorChangeButton">💗</button>
+
+    <div id="instagramProfile">
+      <div id="instagramProfileData">
+        <h1>__lovelymoon</h1>
+        <dl>
+          <div>
+            <dt>post</dt>
+            <dd>11</dd>
+          </div>
+          <div>
+            <dt>followers</dt>
+            <dd>54</dd>
+          </div>
+          <div>
+            <dt>following</dt>
+            <dd>75</dd>
+          </div>
+        </dl>
+        <h3>김묘신</h3>
+        <p>ʕ•ᴥ•ʔﾟ･*</p>
+        <a href="https://blog.naver.com/s-__-" target="blank">
+          blog.naver.com/s-__-
+        </a>
+      </div>
+      <div id="instagramProfileImageContainer">
+        <img src="./trial02-instagramProfile/ProfileImage.gif" id="instagramProfileImage" alt="profileImage"></div>
+      </div>
+    </div>
+
+    <div id="receipt">
+      <h1>
+        Bill sharing request
+        <span id="from">from Soonae</span>
+      </h1>
+      <div id="receiptPaper">
+        <span id="issuedDate" aria-label="Issued on Sep 19th">
+          19.09.2020
+        </span>
+        <h3>McDonald's</h3>
+        <strong id="barcode">
+          <img
+            src="https://raw.githubusercontent.com/rohjs/bugless-101/cc64c9b6e3b2b5a230bd0b0507c2e2fe9ec0a2e5/html-practice/08-receipt/assets/barcode.svg"
+            alt="Barcode"
+          />
+        </strong>
+        <dl>
+          <div>
+            <dt>Coke Light-0.3<span aria-label="liter">L</span></dt>
+            <dd>&dollar;1.50</dd>
+          </div>
+          <div>
+            <dt>Heineken Beer-0.5<span aria-label="liter">L</span></dt>
+            <dd>&dollar;3.25</dd>
+          </div>
+          <div>
+            <dt>Chicken McNuggets</dt>
+            <dd>&dollar;21.00</dd>
+          </div>
+          <div>
+            <dt>In total</dt>
+            <dd>&dollar;25.75</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+
+    <div id="dropDown">
+      <button type="button" id="dropDownButton">
+        <img src="./trial02-dropDownMenu/profileImage.jpeg" alt="profileImage" />
+      </button>
+      <div id="dropDownMenu">
+        <h5>
+          <a href="#">Signed in as <strong>Soonae</strong></a>
+        </h5>
+        <ul>
+          <li><a href="#">Your repositories</a></li>
+          <li><a href="#">Your projects</a></li>
+          <li><a href="#">Your stars</a></li>
+          <li><a href="#">Your gists</a></li>
+          <li><a href="#">Your profile</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">Feature preview</a></li>
+          <li><a href="#">Help</a></li>
+          <li><a href="#">Settings</a></li>
+          <li><a href="#">Sign out</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="inputGroup">
+      <h1>Manage Subscriptions</h1>
+      <p>You can follow the discussion on @S2oonae without to leave a comment. Cool, huh?<br/>
+      Just enter your email address in the form here below and you are all set.</p>
+      <form action="" method="GET">
+        <input type="email" placeholder="Your Email" spellcheck="false" id="emailInput">
+        <button type="submit" id="subscribeButton">Subscribe</button>
+      </form>
+    </div>
+
+    <div class="feedBox">
+      <div class="feedUserProfile">
+      <img src="./trial02-commentBox/profileImage.jpg"/>
+      <div>
+        <h3>S2oonae</h3>
+        <span aria-label="Posted 30 minutes ago.">30 min</span>
+      </div>
+      <button type="button" class="followButton" value="follow">follow</button>
+      </div>
+      <p>
+        The most beautiful experience we can have is the mysterious. It is the fundamental emotion that stands at the cradle of true art and true science. — Albert Einstein
+      </p>
+      <div class="feedFooter">
+        <button type="button" class="likeButton" value="11">11 Likes</button>
+        <button type="button" class="commentButton" value="close">0 Comments</button>
+      </div>
+        <div class="feedComment">
+          <form action="" method="POST">
+            <textarea></textarea>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+    </div>
+
+    <div class="naverMailInbox">
+      <table class="inbox">
+        <thead class="srOnly">
+          <tr>
+            <th>Action</th>
+            <th>Sender</th>
+            <th>Title</th>
+            <th>Timestamp</th>
+            <th>Capacity</th>
+          </tr>
+          </thead>
+          <tbody>
+            <tr class="unread">
+              <td>
+                <div class="inboxAction">
+                  <div class="inboxCheckBox">
+                    <input type="checkBox" class="inbox1"/>
+                    <label for="inbox1" class="srOnly">Select</label>
+                  </div>
+                  <button type="button" class="inboxStar">
+                    <span class="srOnly">Add to favorite</span>
+                  </button>
+                  <button type="button" class="mailState">
+                    <span class="srOnly">Change mail state</span>
+                  </button>
+                </div>
+              </td>
+              <td>
+                네이버 웹툰
+              </td>
+              <td>
+                <a href="#">
+                  <strong class="srOnly">Unread</strong>
+                  <strong>
+                    네이버 웹툰에서 구매한 내역을 안내해 드립니다.
+                  </strong>
+                </a>
+              </td>
+              <td>
+                09-21 23:41
+              </td>
+              <td>
+                17.0KB
+              </td>
+            </tr>
+            <tr class="unread">
+              <td>
+                <div class="inboxAction">
+                  <div class="inboxCheckBox">
+                    <input type="checkBox" class="inbox1"/>
+                    <label for="inbox1" class="srOnly">Select</label>
+                  </div>
+                  <button type="button" class="inboxStar">
+                    <span class="srOnly">Add to favorite</span>
+                  </button>
+                  <button type="button" class="mailState">
+                    <span class="srOnly">Change mail state</span>
+                  </button>
+                </div>
+              </td>
+              <td>
+                스타벅스커피코리아
+              </td>
+              <td>
+                <a href="#">
+                  <strong class="srOnly">Unread</strong>
+                  <strong>
+                    [스타벅스] 고객님의 문의사항에 대해 답변 드립니다.
+                  </strong>
+                </a>
+              </td>
+              <td>
+                09-04 14:09
+              </td>
+              <td>
+                25.0KB
+              </td>
+            </tr>
+          </tbody>
+      </table>
+    </div>
+
+    <div class="musicPlayList">
+      <ol>
+        <li class="musicItem">
+          <img src="./trial02-musicPlayList/달콤한 빈말.jpg" class="albumCoverImage" alt="달콤한 빈말">
+          <div class="musicInfo">
+            <div class="musicTitle">
+              <h1>달콤한 빈말</h1>
+              <strong>백아연</strong>
+            </div>
+              <div class="duration">
+                <span class="srOnly">Duration</span>
+                03:25
+              </div>
+          </div>
+        </li>
+        <li class="musicItem">
+          <img src="./trial02-musicPlayList/그게 아니고.jpg" class="albumCoverImage" alt="그게 아니고">
+          <div class="musicInfo">
+            <div class="musicTitle">
+              <h1>그게 아니고</h1>
+              <strong>10cm</strong>
+            </div>
+            <div class="duration">
+              <span class="srOnly">Duration</span>
+              03:47
+            </div>
+          </div>
+        </li>
+        <li class="musicItem">
+          <img src="./trial02-musicPlayList/say it again.jpg" class="albumCoverImage" alt="say it again">
+          <div class="musicInfo">
+            <div class="musicTitle">
+              <h1>Say it again</h1>
+              <strong>Fances</strong>
+            </div>
+            <div class="duration">
+              <span class="srOnly">Duration</span>
+              02:53
+            </div>
+          </div>
+        </li>
+        <li class="musicItem">
+          <img src="./trial02-musicPlayList/Freedom.jpg" class="albumCoverImage" alt="Freedom">
+          <div class="musicInfo">
+            <div class="musicTitle">
+              <h1>FREEDOM</h1>
+              <strong>AKMU (악동뮤지션)</strong>
+            </div>
+            <div class="duration">
+              <span class="srOnly">Duration</span>
+              03:33
+            </div>
+          </div>
+        </li>
+        <li class="musicItem">
+          <img src="./trial02-musicPlayList/너를 그리다.jpg" class="albumCoverImage" alt="너를 그리다">
+          <div class="musicInfo">
+            <div class="musicTitle">
+              <h1>너를 그리다</h1>
+              <strong>디어 (d.ear)</strong>
+            </div>
+            <div class="duration">
+              <span class="srOnly">Duration</span>
+              03:47
+            </div>
+          </div>
+        </li>
+      </ol>
+    </div>
+    
+    <div class="videoBox">
+      <div class="videoContainer">
+        <video controls>
+          <source src="./trial-videoBox/수비페이퍼.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="videoInfo">
+        <h1>20200818 임병욱</h1>
+        <p>수비 페이퍼 보는 임병욱(소리가 없는 영상입니다.)</p>
+      </div>
+    </div>
+    <script type="text/javascript" src="./trial02-bgColorChange/trial02-bgColorChange.js"></script>
+    <script type="text/javascript" src="./trial02-dropDownMenu/trial02-dropDownMenu.js"></script>
+    <script type="text/javascript" src="./trial02-commentBox/trial02-commentBox.js"></script>
+    <script type="text/javascript" src="./trial02-naverMailInbox/trial02-naverMailInbox.js"></script>
+  </body>
+</html>

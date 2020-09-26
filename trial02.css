@@ -1,0 +1,664 @@
+@font-face {
+  font-family: "NEXON Lv2 Gothic Light";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Light.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BBTreeGL";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_nine_@1.1/BBTreeGL.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IBMPlexSansKR-Text";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Text.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: rgb(38, 38, 51);
+  height: 100vh;
+  align-content: center;
+}
+
+#bgColorChangeButton {
+  background-color: hsl(0, 0%, 100%);
+  display: block;
+  position: relative;
+  margin: 10px 0px;
+  left: 80%;
+  width: 25px;
+  height: 25px;
+  border: none;
+  border-radius: 5px;
+  padding: 0px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 100;
+}
+
+#bgColorChangeButton:focus {
+  outline: none;
+}
+
+#instagramProfile {
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: white;
+  width: 500px;
+  height: 280px;
+  padding: 0px 40px;
+  font-family: "NEXON Lv2 Gothic Light", serif;
+  text-align: center;
+}
+
+#instagramProfileData {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: auto;
+  padding-top: 67px;
+  padding-bottom: auto;
+  text-align: left;
+}
+
+#instagramProfileData h1 {
+  margin: 0px;
+  font-size: 24px;
+}
+
+#instagramProfileData h3,
+#instagramProfileData p {
+  margin: 0px;
+  font-size: 13px;
+}
+
+#instagramProfileData a {
+  margin: 0px;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+#instagramProfileData a:visited {
+  color: inherit;
+}
+
+#instagramProfileData dl div {
+  display: flex;
+}
+
+#instagramProfileData dl {
+  display: flex;
+  margin: 18px 0px;
+  font-size: 13px;
+  text-align: right;
+}
+
+#instagramProfileData dt {
+  display: flex;
+  order: 2;
+  margin: 0px 30px 0px 3px;
+  font-size: 13px;
+}
+
+#instagramProfileData dd {
+  display: flex;
+  order: 1;
+  margin: 0px 3px 0px 0px;
+  font-weight: bold;
+}
+
+#instagramProfileImageContainer {
+  width: auto;
+  height: auto;
+}
+
+#instagramProfileImage {
+  display: flex;
+  position: relative;
+  top: 25%;
+  width: 125px;
+  height: 125px;
+  margin: 0px 60px;
+  border-radius: 150px;
+  overflow: hidden;
+}
+
+/********************************/
+
+#receipt h1 {
+  display: flex;
+  flex-direction: column;
+  margin: 40px 0px;
+  font-size: 19px;
+  color: white;
+}
+
+#receipt h1 span {
+  font-size: 15px;
+  color: rgb(192, 192, 192);
+}
+
+#receiptPaper {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  background-image: url("https://github.com/rohjs/bugless-101/blob/master/html-practice/08-receipt/assets/logo-mcdonalds.png?raw=true");
+  background-repeat: no-repeat;
+  background-size: 40px auto;
+  background-position: 83% 11%;
+  width: 270px;
+  height: 320px;
+  padding: 50px 30px;
+  border-radius: 15px;
+  align-items: center;
+}
+
+#issuedDate {
+  position: relative;
+  right: 30%;
+  font-size: 15px;
+  color: rgb(192, 192, 192);
+}
+
+#receiptPaper h3 {
+  font-size: 17px;
+}
+
+#barcode img {
+  width: 150px;
+  height: auto;
+  margin: 15px 0px;
+  text-align: center;
+}
+
+#receiptPaper dl {
+  display: flex;
+  flex-direction: column-reverse;
+  font-size: 15px;
+  opacity: 70%;
+}
+
+#receiptPaper dl div,
+#receiptPaper dl div:last-child {
+  display: flex;
+  justify-content: space-between;
+}
+
+#receiptPaper dl div:last-child {
+  margin-bottom: 25px;
+}
+
+#receiptPaper dd {
+  font-weight: 600;
+}
+
+/********************************/
+
+#dropDown {
+  position: relative;
+  top: 50px;
+  width: 200px;
+  height: auto;
+  font-size: 13px;
+}
+
+#dropDown button {
+  background-color: transparent;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border: none;
+  padding: 0px;
+  left: 150px;
+  bottom: 10px;
+  cursor: pointer;
+}
+
+#dropDown button:focus {
+  outline: none;
+}
+
+#dropDown img {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+#dropDownMenu:before {
+  position: absolute;
+  top: -20px;
+  left: 160px;
+  width: 0px;
+  height: 0px;
+  border-top: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-bottom: 10px solid white;
+  content: "";
+}
+
+#dropDownMenu {
+  background-color: white;
+  display: none;
+  position: absolute;
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 1px 15px rgba(27, 31, 35, 0.15);
+  transition: transform 200ms ease-in;
+}
+
+#dropDownMenuShow {
+  display: blcok;
+}
+
+#dropDownMenu h5 {
+  font-size: 15px;
+  margin: 0px;
+  padding: 15px;
+}
+
+#dropDownMenu h5 strong:hover {
+  opacity: 60%;
+}
+
+#dropDownMenu ul {
+  margin: 0px;
+  padding: 8px 0px;
+  border-top: 1px solid rgb(207, 207, 207);
+  font-weight: 500;
+}
+
+#dropDownMenu li {
+  list-style: none;
+  font-size: 14px;
+  line-height: 3em;
+  text-indent: 15px;
+}
+
+#dropDownMenu li:hover {
+  background-color: rgb(6, 100, 177);
+  color: white;
+}
+
+#dropDownMenu a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/********************************/
+
+#inputGroup {
+  background-color: white;
+  width: 750px;
+  height: 200px;
+  margin: 50px;
+  padding: 30px 50px;
+  border-radius: 5px;
+  text-align: center;
+  font-family: "NEXON Lv2 Gothic Light";
+  box-shadow: 0 1px 15px rgba(27, 31, 35, 0.15);
+}
+
+#subscribeButton {
+  background-color: rgb(218, 30, 86);
+  width: 90px;
+  height: 40px;
+  margin: 10px 0px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+#emailInput {
+  background-color: gainsboro;
+  width: 400px;
+  height: 40px;
+  margin: 10px 0px;
+  border: none;
+  border-radius: 8px;
+  text-indent: 15px;
+  font-family: inherit;
+}
+
+#subscribeButton:focus,
+#emailInput:focus {
+  outline: none;
+}
+
+/********************************/
+
+.feedBox {
+  width: 420px;
+  height: auto;
+  background-color: white;
+  border-radius: 4px;
+  padding: 20px;
+  box-shadow: 0 1px 15px rgba(27, 31, 35, 0.15);
+  font-family: "BBTreeGL", serif;
+}
+
+.feedBox button:focus,
+.feedComment textarea:focus {
+  outline: none;
+}
+
+.feedUserProfile {
+  display: flex;
+}
+
+.feedUserProfile div {
+  margin: 0px 20px;
+}
+
+.feedBox img {
+  widows: 40px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+.feedUserProfile h3 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.feedUserProfile span {
+  font-size: 13px;
+  color: grey;
+}
+
+.feedBox p {
+  font-size: 15px;
+}
+
+.followButton {
+  position: relative;
+  background-color: white;
+  left: 180px;
+  width: 80px;
+  border: 1px solid rgb(212, 212, 212);
+  border-radius: 4px;
+  color: rgb(23, 144, 243);
+  font-weight: 600;
+  font-family: inherit;
+  text-align: center;
+  cursor: pointer;
+  transition: color 300ms, background-color 400ms, border-color 300ms;
+}
+
+.followButton_following {
+  position: relative;
+  background-color: rgb(23, 144, 243);
+  left: 160px;
+  width: 100px;
+  border: 1px solid white;
+  border-radius: 4px;
+  color: white;
+  font-weight: 600;
+  font-family: inherit;
+  text-align: center;
+  cursor: pointer;
+  transition: color 300ms, background-color 400ms, border-color 300ms;
+}
+
+.feedFooter button {
+  background-color: transparent;
+  margin: 5px 10px 5px 0px;
+  border: none;
+  color: rgb(23, 144, 243);
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.feedComment {
+  display: none;
+}
+
+.showFeedComment {
+  display: block;
+}
+
+.feedComment textarea {
+  width: 100%;
+  height: 70px;
+  margin: 5px 0px;
+}
+
+.feedComment button {
+  background-color: rgb(23, 144, 243);
+  width: 77px;
+  height: 37px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+}
+
+/********************************/
+
+.inbox {
+  background-color: white;
+  width: auto;
+  margin: 10px;
+  border-collapse: collapse;
+  border-radius: 5px;
+  font-size: 14px;
+  text-indent: 10px;
+  box-shadow: 0 1px 15px rgba(27, 31, 35, 0.15);
+}
+
+.inbox td:nth-child(4),
+.inbox td:nth-child(5) {
+  color: grey;
+  padding: 0px 10px 0px 0px;
+}
+
+.inbox td:nth-child(2) {
+  padding: 0px 10px 0px 0px;
+}
+
+.inbox td:nth-child(3) {
+  padding: 0px 70px 0px 0px;
+}
+
+.inbox tr {
+  border-bottom: 1px solid rgb(204, 204, 204);
+}
+
+.inbox tr:last-of-type {
+  border-bottom: none;
+}
+
+.naverMailInbox strong {
+  font-weight: inherit;
+}
+
+.srOnly {
+  display: none;
+}
+
+.inboxAction {
+  display: flex;
+  justify-content: space-between;
+}
+
+.inboxAction button {
+  width: 17px;
+  height: 17px;
+  margin: 1.5px 7px;
+  padding: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.inboxAction button:focus {
+  outline: none;
+}
+
+.inboxStar {
+  background-image: url("./trial02-naverMAilInbox/star-regular.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 60%;
+}
+
+.inboxStarBookmarked {
+  background-image: url("./trial02-naverMAilInbox/star-solid.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 60%;
+}
+
+.unread td:nth-child(2),
+.unread a {
+  color: steelblue;
+  text-decoration: none;
+}
+
+.unread .inboxAction .mailState {
+  background-image: url("./trial02-naverMAilInbox/envelope-regular.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 60%;
+}
+
+.read td:nth-child(2),
+.read a {
+  color: black;
+  text-decoration: none;
+}
+
+.read .inboxAction .mailState {
+  background-image: url("./trial02-naverMAilInbox/envelope-open-regular.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 60%;
+}
+
+/********************************/
+
+.musicPlayList {
+  background-color: white;
+  display: flex;
+  width: 450px;
+  height: auto;
+  border-radius: 5px;
+  font-size: 13px;
+  font-family: "IBMPlexSansKR-Text", serif;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.musicPlayList ol {
+  padding: 0px;
+}
+
+.musicPlayList li {
+  display: flex;
+  width: 380px;
+  cursor: pointer;
+}
+
+.musicPlayList li:hover {
+  background-color: rgb(216, 216, 216);
+}
+
+.albumCoverImage {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  border-radius: 3px;
+  align-items: center;
+}
+
+.musicInfo {
+  display: inline-flex;
+  width: 330px;
+  height: auto;
+  padding: 6.5px 10px;
+  border-top: 1px solid rgb(216, 216, 216);
+  color: rgb(153, 153, 153);
+  justify-content: space-between;
+}
+
+.musicItem:last-child .musicInfo {
+  border-bottom: 1px solid rgb(216, 216, 216);
+}
+
+.musicInfo h1 {
+  font-size: 15px;
+  font-weight: normal;
+  margin: 0px;
+  color: black;
+}
+
+.duration {
+  font-weight: 600;
+}
+
+.duration {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/********************************/
+
+.videoBox {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  height: 400px;
+  margin: 30px;
+  border-radius: 5px;
+  font-family: "NEXON Lv2 Gothic Light", serif;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 15px rgba(27, 31, 35, 0.15);
+}
+
+.videoContainer {
+  display: flex;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.videoContainer video {
+  width: 80%;
+  height: auto;
+}
+
+.videoInfo {
+  width: 80%;
+  margin: 15px 0px;
+}
+
+.videoInfo h1 {
+  font-size: 17px;
+}
+
+.videoInfo p {
+  font-size: 13px;
+}
