@@ -4,19 +4,19 @@ const musicPlayerLayer_popup = document.querySelector(
   ".musicPlayer-popup-container"
 );
 const quitButton = document.querySelector(".musicPlayer-quitButton");
-const showMoreButton = document.createElement("button");
 
 function clickMusicItem() {
   const musicInfo = this.id;
+  const showMoreButton = document.createElement("button");
   const playerMusic = document.createElement("audio");
   const albumImage = document.createElement("img");
   const musicDetail = this.querySelector(".musicDetail").cloneNode(true);
-  const musicTitle = musicDetail.firstElementChild;
-  const artist = musicDetail.lastElementChild;
+  const musicTitle = musicDetail.querySelector(".musicTitle");
+  const artist = musicDetail.querySelector(".artist");
 
   albumImage.src = `./trial02-musicPlayList/${musicInfo}.jpg`;
   albumImage.alt = `${musicInfo} 앨범아트`;
-  albumImage.classList.add("musicPlayer-albumImage");
+  albumImage.classList.add("musicPlayer-albumCoverImage");
 
   musicDetail.classList.add("align-items");
   musicDetail.classList.add("musicPlayer-musicDetail");
@@ -33,15 +33,14 @@ function clickMusicItem() {
   musicPlayerLayer.style.display = "flex";
 
   if (musicTitle.scrollWidth > 190) {
-    const textSlide_container = document.createElement("div");
-    const musicTitle_copy = musicTitle.cloneNode(true);
+    const textSlide = document.createElement("marquee");
 
-    textSlide_container.appendChild(musicTitle_copy);
-    musicDetail.insertBefore(textSlide_container, musicTitle);
-    textSlide_container.appendChild(musicTitle);
-
-    textSlide_container.classList.add("text-slide");
-    musicDetail.classList.add("longTitle");
+    textSlide.behavior = "scroll";
+    textSlide.scrollAmount = "4";
+    textSlide.classList.add("hasLongTitle");
+    musicTitle.style.overflow = "visible";
+    textSlide.appendChild(musicTitle);
+    musicDetail.insertBefore(textSlide, artist);
   }
 
   if (artist.scrollWidth > 190) {
@@ -56,9 +55,10 @@ function clickMusicItem() {
   }
 
   function closePlayer() {
-    while (musicPlayerLayer_popup.childNodes.length > 2) {
+    while (musicPlayerLayer_popup.childElementCount > 1) {
       musicPlayerLayer_popup.removeChild(musicPlayerLayer_popup.lastChild);
     }
+
     musicPlayerLayer.style.display = "";
   }
 

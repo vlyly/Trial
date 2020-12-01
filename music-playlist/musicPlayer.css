@@ -130,7 +130,7 @@ audio:focus {
   border-bottom: 1px solid rgba(216, 216, 216, 1);
 }
 
-.albumCoverImage {
+.musicPlayList-albumCoverImage {
   display: flex;
   align-items: center;
   width: 40px;
@@ -149,22 +149,31 @@ audio:focus {
 }
 
 .musicDetail {
-  display: flex; /**/
-  flex-direction: column; /**/
+  display: flex;
+  flex-direction: column;
   position: relative;
   width: 230px;
   height: auto;
-  /* overflow: hidden;
-  text-overflow: ellipsis; */
 }
 
 .musicTitle {
   display: block;
-  flex-grow: 0;
   max-width: 190px;
   margin: 0 0 3px 0;
   font-size: 13px;
   color: rgba(110, 110, 110, 1);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.artist {
+  display: block;
+  max-width: 190px;
+  height: auto;
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(153, 153, 153, 1);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -189,7 +198,7 @@ audio:focus {
   position: absolute;
   z-index: 100;
   top: 0;
-  background-color: rgba(99, 93, 93, 0.6);
+  background-color: rgba(99, 93, 93, 0.5);
   width: inherit;
   height: inherit;
 }
@@ -229,11 +238,11 @@ audio:focus {
   align-items: center;
 }
 
-.musicPlayer-albumImage {
+.musicPlayer-albumCoverImage {
   display: block;
   width: 180px;
   height: auto;
-  margin-top: 30px;
+  margin-top: 40px;
   font-family: inherit;
 }
 
@@ -241,71 +250,12 @@ audio:focus {
   margin: 15px 0;
 }
 
-.longTitle {
-  justify-content: flex-end;
-  align-items: left;
-  /* height: 31px; */
-}
-
-.text-slide {
-  position: relative;
-  /* top: -16px; */
+.hasLongTitle {
   width: 190px;
-  height: 14px; /**/
-  margin-bottom: 3px;
-  overflow: hidden; /**/
 }
 
-.text-slide h1:first-of-type {
-  position: absolute;
-  max-width: 100%;
-  overflow: visible;
-  transform: translate(-50%, 0);
-  animation: text-slide-previous 7000ms linear infinite forwards;
-}
-
-.text-slide h1:last-of-type {
-  position: absolute;
-  max-width: 100%;
-  overflow: visible;
-  transform: translate(-50%, 0);
-  animation: text-slide-following 7000ms linear infinite forwards;
-}
-
-@keyframes text-slide-previous {
-  from {
-    left: 50%;
-  }
-
-  to {
-    left: -80%;
-  }
-}
-
-@keyframes text-slide-following {
-  from {
-    left: 180%;
-  }
-
-  to {
-    left: 50%;
-  }
-}
-
-.longTitle .artist {
-  text-align: center;
-}
-
-.artist {
-  display: block;
-  max-width: 190px;
-  height: auto; /**/
-  font-size: 13px;
-  font-weight: 400;
-  color: rgba(153, 153, 153, 1);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+.hasLongTitle h1 {
+  max-width: none;
 }
 
 .showMoreArtist {
@@ -340,5 +290,5 @@ audio:focus {
 .musicPlayer-controller {
   display: block;
   width: 300px;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
