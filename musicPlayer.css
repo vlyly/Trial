@@ -1,0 +1,294 @@
+/***font***/
+
+@font-face {
+  font-family: "GoyangIlsan";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GoyangIlsan.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/******/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  z-index: -100;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  font-family: "GoyangIlsan", serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+audio:focus {
+  outline: none;
+}
+
+.srOnly {
+  display: none;
+}
+
+/******/
+
+.musicPlaylist-Layer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(224, 180, 177, 1);
+  width: inherit;
+  height: inherit;
+}
+
+.coment {
+  display: block;
+  position: relative;
+  top: -20px;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0px 4px 10px 0px rgba(126, 83, 83, 0.25);
+  width: 150px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+  animation-direction: alternate;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-play-state: running;
+  animation-name: ping-pong;
+  transform: rotate(0.001deg);
+  /**IE에서는 css transition 적용 시 요소가 부들부들 떠는 현상이 있습니다. 움직임이 작은 범위에 긴시간으로 적용할 때 특히 심한 것 같습니다. IE는 부분 픽셀 계산에 문제가 있는 것 같습니다.**/
+}
+
+@keyframes ping-pong {
+  from {
+    top: -22px;
+  }
+  to {
+    top: -15px;
+  }
+}
+
+.coment::after {
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 37px;
+  left: 69px;
+  border-top: 8px solid rgba(255, 255, 255, 1);
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid transparent;
+  content: "";
+}
+
+.musicPlayList {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0px 4px 10px 0px rgba(126, 83, 83, 0.25);
+  width: 450px;
+  height: auto;
+  border-radius: 5px;
+  font-family: inherit;
+}
+
+.musicPlayList ol {
+  padding: 0;
+}
+
+.musicItem {
+  display: flex;
+  background-color: transparent;
+  width: 380px;
+  height: inherit;
+  border-top: 1px solid rgba(216, 216, 216, 1);
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.musicItem:hover {
+  background-color: rgba(216, 216, 216, 1);
+}
+
+.musicPlayList .musicItem:last-child {
+  border-bottom: 1px solid rgba(216, 216, 216, 1);
+}
+
+.musicPlayList-albumCoverImage {
+  display: flex;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  border-radius: 3px;
+}
+
+.musicInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 330px;
+  max-height: 1000px;
+  padding: 6.5px 10px;
+}
+
+.musicDetail {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 230px;
+  height: auto;
+}
+
+.musicTitle {
+  display: block;
+  max-width: 190px;
+  margin: 0 0 3px 0;
+  font-size: 13px;
+  color: rgba(110, 110, 110, 1);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.artist {
+  display: block;
+  max-width: 190px;
+  height: auto;
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(153, 153, 153, 1);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.duration {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 700;
+  color: rgb(165, 165, 165);
+}
+
+/**musicPlayer**/
+
+.musicPlayer-Layer {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  background-color: rgba(99, 93, 93, 0.5);
+  width: inherit;
+  height: inherit;
+}
+
+.musicPlayer-popup-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  background-color: rgba(255, 255, 255, 1);
+  width: 400px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.musicPlayer-quitButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  font-size: 25px;
+  text-align: center;
+  color: rgba(207, 134, 145, 1);
+}
+
+.musicPlayer-quitButton:hover {
+  opacity: 50%;
+}
+
+.align-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.musicPlayer-albumCoverImage {
+  display: block;
+  width: 180px;
+  height: auto;
+  margin-top: 40px;
+  font-family: inherit;
+}
+
+.musicPlayer-musicDetail {
+  margin: 15px 0;
+}
+
+.hasLongTitle {
+  width: 190px;
+}
+
+.hasLongTitle h1 {
+  max-width: none;
+}
+
+.showMoreArtist {
+  white-space: normal;
+  word-break: break-all;
+}
+
+.showMoreButton {
+  position: absolute;
+  top: 50%;
+  right: 2%;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  background-image: url("./trial02-musicPlayList/caret-down.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  border: none;
+}
+
+.showMoreButton_close {
+  background-image: url("./trial02-musicPlayList/caret-up.png");
+}
+
+.showMoreButton_close:hover,
+.showMoreButton:hover {
+  opacity: 50%;
+}
+
+.musicPlayer-controller {
+  display: block;
+  width: 300px;
+  margin-bottom: 40px;
+}
